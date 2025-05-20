@@ -102,11 +102,13 @@ tableBody.onclick = (event) =>{
     }else if(event.target.classList.contains("edit")){
         const id = event.target.getAttribute("data-id");
         const item = JSON.parse(localStorage.getItem("employees")).find(item=>item.id === id);
-        
+
+        if(item !== undefined && item !== null){
         nameInput.value = item.name;
         emailInput.value = item.email;
         mobileInput.value = item.mobile;
         contIdEdit.value = id;
         submit.value = "update";
+        }
     }
 }
