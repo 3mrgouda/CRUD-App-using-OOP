@@ -101,7 +101,7 @@ tableBody.onclick = (event) =>{
 
     }else if(event.target.classList.contains("edit")){
         const id = event.target.getAttribute("data-id");
-        const item = JSON.parse(localStorage.getItem("employees")).find(item=>item.id === +id);
+        const item = JSON.parse(localStorage.getItem("employees")).find(item=>item.id == id);
 
         nameInput.value = item.name;
         emailInput.value = item.email;
