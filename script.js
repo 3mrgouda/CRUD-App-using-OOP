@@ -30,7 +30,7 @@ class Empolyee{
         const newItem = {id:this.id, name:this.name, email:this.email, mobile:this.mobile };
         const updatedData = JSON.parse(localStorage.getItem("employees")).map((item)=>{
 
-            if(item.id === id){
+            if(item.id == id){
                 return newItem;
             }else{
                 return item;
